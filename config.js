@@ -1,2 +1,5 @@
-/* Configure the public frontend with your Render backend URL. Keep this file free of secrets. */
-window.CONEXA_CONFIG = { API_URL: "http://localhost:3000" };
+
+/* URL pública do backend no Render */
+window.CONEXA_CONFIG = {
+  API_URL: "https://conexa-backend-p6ab.onrender.com"
+};
