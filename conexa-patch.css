@@ -1,0 +1,23 @@
+/* Conexa UI patch: avatar sizing, less rounded surfaces, voice activity and screen-share controls */
+:root { --radius-sm: 5px; --radius-md: 8px; }
+button, input, textarea, select { border-radius: 6px !important; }
+.server-icon { width: 44px !important; height: 44px !important; overflow: hidden; }
+.server-icon img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
+.profile-avatar-small { width: 34px; height: 34px; flex: 0 0 34px; border-radius: 8px; object-fit: cover; background: #292633; }
+.message { display: flex; align-items: flex-start; gap: 10px; }
+.message-avatar { width: 36px !important; height: 36px !important; flex: 0 0 36px; border-radius: 8px; object-fit: cover; }
+.fallback-avatar { width: 36px !important; height: 36px !important; flex: 0 0 36px; border-radius: 8px; }
+.message-avatar:not([src]), .message-avatar[src=""] { display: none; }
+.voice-members { display: flex; flex-wrap: wrap; gap: 14px; padding: 18px; }
+.voice-member { display: flex; align-items: center; gap: 10px; padding: 12px; border: 1px solid #343140; border-radius: 8px; min-width: 180px; background: #191821; transition: border-color .12s, box-shadow .12s; }
+.voice-member.speaking { border: 2px solid #3bd879; box-shadow: 0 0 0 2px #3bd87922; }
+.voice-avatar, .profile-preview { width: 48px; height: 48px; flex: 0 0 48px; border-radius: 8px; object-fit: cover; background: #292633; }
+.voice-placeholder { display: grid; place-items: center; }
+.voice-tools { display: flex; align-items: end; flex-wrap: wrap; gap: 10px; padding: 12px; border-top: 1px solid #302d40; }
+.voice-tools label { display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: #b8b4c7; }
+.voice-tools select { min-width: 230px; padding: 9px; background: #111019; color: #f3f0ff; border: 1px solid #393548; }
+.secondary-button { padding: 8px 12px; border: 1px solid #393548; background: #242230; color: #f3f0ff; cursor: pointer; }
+.secondary-button:hover, .secondary-button.active { background: #3a3157; border-color: #8a72f2; }
+.screen-preview { display: block; width: min(100%, 960px); max-height: 55vh; margin: 12px auto; object-fit: contain; background: #08080c; border: 1px solid #383346; border-radius: 8px; }
+.profile-modal-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.profile-modal-head p { color: #aaa5bc; }
